@@ -86,31 +86,46 @@ console.log(indexOf(arr, `Max`, 0));
 
 // every
 
-// const arr = [1, 2, 3, `someStr`];
+// const arr = [1, 2, 3, 4, 66];
 
-// function every(array) {
+// function task(item) {
+//     if (item > 10) {
+//         return false;
+//     }
+//     return true;
+// }
+
+
+// function every(array, taskFunc) {
 
 //     for (let i = 0; i <= array.length - 1; i++) {
-//         if (isNaN(array[i])) {
+//         if (taskFunc(array[i]) === false) {
 //             return false;
 //         }
 //     }
 //     return true;
 // }
-// console.log(every(arr));
+// console.log(every(arr, task));
 
 
 // some
 
-// const arr = [1, 2, 3, 4, `someStr`];
+// const arr = [1, 2, 3, 4, 66];
 
-// function some(array) {
+// function task(item) {
+//     if (item > 10) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// function some(array, taskFunc) {
 
 //     for (let i = 0; i <= array.length - 1; i++) {
-//         if (array[i] === 3) {
+//         if (taskFunc(array[i]) === true) {
 //             return true;
 //         }
 //     }
 //     return false;
 // }
-// console.log(some(arr));
+// console.log(some(arr, task));
