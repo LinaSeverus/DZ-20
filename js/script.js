@@ -2,7 +2,7 @@
 
 //Напишите функцию которая полностью имитирует работу метода:
 
-// indexOf
+// indexOf     Метод indexOf() возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
 
 const arr = [1, 2, `Lina`, `Max`, 3];
 
@@ -19,7 +19,10 @@ function indexOf(array, item, fromIndex = null) {
 console.log(indexOf(arr, `Max`, 0));
 
 
-// lastIndexOf
+
+
+
+// lastIndexOf                    то же, что и indexOf, только поиск идет справа налево
 
 // const arr = [1, 2, `Lina`, `Max`, 3];
 
@@ -36,39 +39,60 @@ console.log(indexOf(arr, `Max`, 0));
 // console.log(indexOf(arr, `Max`, -1));
 
 
-// find
+
+
+
+// find  Метод find() возвращает значение первого найденного в массиве элемента, которое удовлетворяет условию переданному в callback функции.
+//       В противном случае возвращается undefined.
+
 
 // const arr = [1, 2, `Lina`, `Max`, 3];
 
-// function find(item, fromIndex = 0, array) {
+// function task(item, Index, array) {
+//     return item === `Max` ? true : false;
+// }
 
-//     for (let i = fromIndex; i <= array.length - 1; i++) {
-//         if (array[i] === item) {
-//             return item;
+// function find(array, taskFunc) {
+
+//     for (let i = 0; i <= array.length - 1; i++) {
+//         if (task(array[i], i, array) === true) {
+//             return array[i];
 //         }
 //     }
 //     return undefined;
 // }
-// console.log(find(`Max`, 0, arr));
+// console.log(find(arr, task));
 
 
-// findIndex
+
+
+// findIndex   Метод findIndex() возвращает индекс в массиве, если элемент удовлетворяет условию проверяющей функции. 
+//             В противном случае возвращается -1.
+
 
 // const arr = [1, 2, `Lina`, `Max`, 3];
 
-// function find(item, fromIndex = 0, array) {
+// function task(item, Index, array) {
+//     return item === `Max` ? true : false;
+// }
 
-//     for (let i = fromIndex; i <= array.length - 1; i++) {
-//         if (array[i] === item) {
+// function find(array, taskFunc) {
+
+//     for (let i = 0; i <= array.length - 1; i++) {
+//         if (task(array[i], i, array) === true) {
 //             return i;
 //         }
 //     }
-//     return -1;
+//     return undefined;
 // }
-// console.log(find(`Lina`, 0, arr));
+// console.log(find(arr, task));
 
 
-// includes
+
+
+
+// includes    Метод includes() определяет, содержит ли массив определённый элемент, возвращая в зависимости от этого true или false.
+
 
 // const arr = [1, 2, `Lina`, `Max`, 3];
 
@@ -84,15 +108,16 @@ console.log(indexOf(arr, `Max`, 0));
 // console.log(includes(`Max`, 0, arr));
 
 
-// every
+
+
+
+// every   Метод every() проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции.
+
 
 // const arr = [1, 2, 3, 4, 66];
 
 // function task(item) {
-//     if (item > 10) {
-//         return false;
-//     }
-//     return true;
+//     return item > 10 ? false : true;
 // }
 
 
@@ -108,15 +133,15 @@ console.log(indexOf(arr, `Max`, 0));
 // console.log(every(arr, task));
 
 
-// some
+
+
+// some        Метод some() проверяет, удовлетворяет ли какой-либо элемент массива условию, заданному в передаваемой функции.
+
 
 // const arr = [1, 2, 3, 4, 66];
 
 // function task(item) {
-//     if (item > 10) {
-//         return true;
-//     }
-//     return false;
+//     return item > 10 ? true : false;
 // }
 
 // function some(array, taskFunc) {
